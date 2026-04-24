@@ -1,5 +1,6 @@
 from core.verdandi import handle_query
 from core.logger import save_log
+from core.urd import analyze_logs
 
 question = input("Ask Verdandi: ")
 
@@ -13,3 +14,6 @@ confusion = input("What confused you : ")
 save_log(question, difficulty, confusion)
 
 print("\nSaved.\n")
+
+print("\nUrd Analysis (Weak Topics):\n")
+print(analyze_logs())
